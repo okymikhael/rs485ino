@@ -28,8 +28,8 @@ while True:
     print(line)
 
     if len(line) == 0:
-        os.system('python my_file.py')
-        exit()
+        os.system('python3 ReceiveRs485.py')
+        # exit()
 
     sleep(1)
 
