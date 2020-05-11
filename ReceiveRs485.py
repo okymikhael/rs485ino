@@ -29,7 +29,7 @@ while True:
         # print(mdata)
         print(send.readline())
         print(send.readline().decode('utf-8').rstrip())
-        
+        send.flush()
         # if mdata == send.readline().decode().strip():
         #     mdata = mdata.split('#')
         #     sensor = int (mdata[1])
