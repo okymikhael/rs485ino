@@ -21,7 +21,7 @@ send.reset_output_buffer()
 # flushinput()
 while True:
     # try:
-    if send.in_waiting:
+    if send.inWaiting():
         # mdata = send.read().decode()
         # send.flushInput()
         # print(mdata)
