@@ -17,8 +17,12 @@ send = serial.Serial(
 
 i = [0,10,45,90,135,180,135,90,45,10,0]
 
-while True:
-     for x in i:
-        send.write(str(x))
-        print(x)
-        time.sleep(1.5)
+# while True:
+#      for x in i:
+#         send.write(str(x))
+#         print(x)
+
+mdata = send.read().decode()
+print(mdata)
+print(send.read())
+time.sleep(1.5)

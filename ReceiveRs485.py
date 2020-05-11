@@ -18,7 +18,6 @@ while True:
         mdata = Ser1.read().decode()
         print(mdata)
         print(Ser1.read())
-        print("Masuk")
 
         if mdata == Ser1.readline().decode().strip():
             mdata = mdata.split('#')
