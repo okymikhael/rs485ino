@@ -23,5 +23,6 @@ while True:
             sensor = int (mdata[1])
             print ("ID : {}, Intensitas : {}".format (mdata[0], sensor))
 
+        sleep(1)
     sleep(1)
 # Ser1.close()
