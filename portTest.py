@@ -20,8 +20,8 @@ while True:
         mdata = send.read().decode()
         print(mdata)
         print(send.readline())
-    except:
-        print("Data Loss")
+    except IOError:
+        print(IOError)
     
     
     # if mdata == send.readline().decode().strip():
