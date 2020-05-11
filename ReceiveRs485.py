@@ -15,11 +15,13 @@ send = serial.Serial(
     timeout=1
 )
 
+send.reset_input_buffer()
 # flushinput()
 while True:
     # try:
     if send.in_waiting:
         mdata = send.read().decode()
+        # send.flushInput()
         # print(mdata)
         print(send.readline())
         
