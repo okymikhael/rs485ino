@@ -32,4 +32,5 @@ while True:
         #     sensor = int (mdata[1])
         #     print ("ID : {}, Intensitas : {}".format (mdata[0], sensor))
 
+    send.close()
     sleep(1)
