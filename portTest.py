@@ -16,9 +16,13 @@ send = serial.Serial(
 )
 
 while True:
-    mdata = send.read().decode()
-    print(mdata)
-    print(send.readline())
+    try:
+        mdata = send.read().decode()
+        print(mdata)
+        print(send.readline())
+    except:
+        print("Data Loss")
+    
     
     # if mdata == send.readline().decode().strip():
     #     mdata = mdata.split('#')
