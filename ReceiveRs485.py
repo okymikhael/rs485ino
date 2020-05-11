@@ -15,8 +15,6 @@ send = serial.Serial(
     timeout=1
 )
 
-send.reset_input_buffer()
-send.reset_output_buffer()
 
 # flushinput()
 while True:
@@ -32,4 +30,6 @@ while True:
             sensor = int (mdata[1])
             print ("ID : {}, Intensitas : {}".format (mdata[0], sensor))
 
-    sleep(3)
+    send.reset_input_buffer()
+    send.reset_output_buffer()
+    sleep(1)
