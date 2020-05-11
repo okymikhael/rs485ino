@@ -1,0 +1,24 @@
+Arduino ~ Rs485
+Pin 7 ~ DI/tx
+Pin 6 ~ R0/rx
+Pin 2 ~ DE/RE
+GND ~ GND
+5v ~ bcc
+
+
+Raspy /Usb ~ Rs485
+Board 7 ~ DE/RE
+Tx ~ DI
+Rx ~ R0
+5v ~ vcc
+Gnd ~ Gnd
+
+///////////////////////
+
+Hasil bacaannya nantinya kalo 2 arduino
+misal 
+ID : 01, Intensitas : 987 
+ID : 02, Intensitas : 986
+ID : 01, Intensitas : 9880
+ID : 02, Intensitas : 1737
+dst
