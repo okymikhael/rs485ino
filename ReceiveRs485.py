@@ -16,12 +16,13 @@ send = serial.Serial(
 )
 # send = serial.Serial('/dev/ttyUSB0', 4800, 8, 'N', 1, timeout=1)
 
-send.reset_input_buffer()
-send.flush()
+# send.reset_input_buffer()
+# send.flush()
 
-line = send.readline().decode('utf-8').rstrip()
+
 send.reset_input_buffer()
-while line:
+while True:
+    line = send.readline().decode('utf-8').rstrip()
     print(line)
     sleep(1)
 
