@@ -8,7 +8,7 @@ from time import sleep
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(7, GPIO.OUT, initial= GPIO.LOW)
 
-Ser1 = serial.Serial('/dev/ttyUSB1',9600)
+Ser1 = serial.Serial('/dev/ttyUSB0',9600)
                    
 Ser1.flushInput()
 
