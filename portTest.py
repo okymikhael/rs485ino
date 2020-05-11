@@ -17,9 +17,9 @@ send = serial.Serial(
 
 while True:
     # try:
-    if send.inWaiting():
+    if send.in_waiting:
         mdata = send.read().decode()
-        print(mdata)
+        # print(mdata)
         print(send.readline())
         # except IOError:
         #     print("error : {}".format(IOError))
@@ -30,4 +30,4 @@ while True:
         #     sensor = int (mdata[1])
         #     print ("ID : {}, Intensitas : {}".format (mdata[0], sensor))
 
-    # sleep(1)
+    sleep(1)
