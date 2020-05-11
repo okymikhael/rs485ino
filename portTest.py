@@ -25,4 +25,4 @@ while True:
     #     sensor = int (mdata[1])
     #     print ("ID : {}, Intensitas : {}".format (mdata[0], sensor))
 
-    time.sleep(1.5)
+    time.sleep(1)
