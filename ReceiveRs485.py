@@ -19,10 +19,11 @@ send = serial.Serial(
 send.reset_input_buffer()
 send.flush()
 
-line = send.readline()
+line = send.readline().decode('utf-8').rstrip()
 send.reset_input_buffer()
 while line:
-    print(line),
+    print(line)
+    sleep(1)
 
 
 # send.reset_output_buffer()
