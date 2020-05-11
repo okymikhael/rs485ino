@@ -17,7 +17,7 @@ send = serial.Serial(
 # send = serial.Serial('/dev/ttyUSB0', 4800, 8, 'N', 1, timeout=1)
 
 send.reset_input_buffer()
-send.reset_output_buffer()
+# send.reset_output_buffer()
 # flushinput()
 while True:
     # try:
@@ -33,4 +33,4 @@ while True:
         #     print ("ID : {}, Intensitas : {}".format (mdata[0], sensor))
 
     # send.close()
-    sleep(1)
+    sleep(3)
