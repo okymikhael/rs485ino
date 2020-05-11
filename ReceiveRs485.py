@@ -19,21 +19,27 @@ send = serial.Serial(
 send.reset_input_buffer()
 send.flush()
 
+line = send.readline()
+send.reset_input_buffer()
+while line:
+    print(line),
+
+
 # send.reset_output_buffer()
 # flushinput()
-while True:
-    # try:
-    if send.inWaiting():
-        # mdata = send.read().decode()
-        # send.flushInput()
-        # print(mdata)
-        print(send.readline())
-        print(send.readline().decode('utf-8').rstrip())
-        send.flush()
-        # if mdata == send.readline().decode().strip():
-        #     mdata = mdata.split('#')
-        #     sensor = int (mdata[1])
-        #     print ("ID : {}, Intensitas : {}".format (mdata[0], sensor))
+# while True:
+#     # try:
+#     if send.inWaiting():
+#         # mdata = send.read().decode()
+#         # send.flushInput()
+#         # print(mdata)
+#         print(send.readline())
+#         print(send.readline().decode('utf-8').rstrip())
+#         send.flush()
+#         # if mdata == send.readline().decode().strip():
+#         #     mdata = mdata.split('#')
+#         #     sensor = int (mdata[1])
+#         #     print ("ID : {}, Intensitas : {}".format (mdata[0], sensor))
 
-    # send.close()
-    sleep(3)
+#     # send.close()
+#     sleep(3)
