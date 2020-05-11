@@ -19,6 +19,9 @@ send.flushInput()
 send.flushOutput()
 
 while True:
+    bytesToRead = send.inWaiting()
+    send.read(bytesToRead)
+# while True:
     # try:
     # if send.in_waiting:
     #     mdata = send.read().decode()
@@ -30,5 +33,5 @@ while True:
     #         sensor = int (mdata[1])
     #         print ("ID : {}, Intensitas : {}".format (mdata[0], sensor))
 
-    print(send.readline())
+    # print(send.readline())
     sleep(1)
