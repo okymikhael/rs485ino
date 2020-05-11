@@ -14,7 +14,7 @@ GPIO.setup(7, GPIO.OUT, initial=GPIO.LOW)
 #     bytesize=serial.EIGHTBITS,
 #     timeout=1
 # )
-ser = serial.Serial('/dev/ttyUSB0', 4800, 8, 'N', 1, timeout=1)
+send = serial.Serial('/dev/ttyUSB0', 4800, 8, 'N', 1, timeout=1)
 
 
 send.flushInput()
