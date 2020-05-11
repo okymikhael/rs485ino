@@ -6,14 +6,16 @@ from time import sleep
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(7, GPIO.OUT, initial=GPIO.LOW)
 
-send = serial.Serial(
-    port='/dev/ttyUSB0',
-    baudrate = 9600,
-    parity=serial.PARITY_NONE,
-    stopbits=serial.STOPBITS_ONE,
-    bytesize=serial.EIGHTBITS,
-    timeout=1
-)
+# send = serial.Serial(
+#     port='/dev/ttyUSB0',
+#     baudrate = 9600,
+#     parity=serial.PARITY_NONE,
+#     stopbits=serial.STOPBITS_ONE,
+#     bytesize=serial.EIGHTBITS,
+#     timeout=1
+# )
+ser = serial.Serial('/dev/ttyUSB0', 4800, 8, 'N', 1, timeout=1)
+
 
 send.flushInput()
 send.flushOutput()
