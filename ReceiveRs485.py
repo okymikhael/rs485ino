@@ -15,7 +15,7 @@ send = serial.Serial(
     timeout=1
 )
 
-flushinput()
+# flushinput()
 while True:
     # try:
     if send.in_waiting:
