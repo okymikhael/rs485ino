@@ -1,5 +1,6 @@
 import time
 import serial
+import os
 import RPi.GPIO as GPIO
 from time import sleep
 
@@ -25,7 +26,11 @@ send.flush()
 while True:
     line = send.readline().decode('utf-8').rstrip()
     print(line)
-    print(len(line) if len(line) > 0 else 0)
+
+    if len(line) > 0:
+        exit()
+        os.system('python my_file.py')
+
     sleep(1)
 
 
