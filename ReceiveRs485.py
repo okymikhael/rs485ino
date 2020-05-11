@@ -27,9 +27,9 @@ while True:
     line = send.readline().decode('utf-8').rstrip()
     print(line)
 
-    if len(line) > 0:
-        exit()
+    if len(line) == 0:
         os.system('python my_file.py')
+        exit()
 
     sleep(1)
 
