@@ -20,7 +20,7 @@ while True:
     # try:
     if send.in_waiting:
         mdata = send.read().decode()
-        print(mdata)
+        # print(mdata)
         print(send.readline())
         
         if mdata == send.readline().decode().strip():
