@@ -17,16 +17,17 @@ send = serial.Serial(
 
 while True:
     # try:
-    mdata = send.read().decode()
-    print(mdata)
-    print(send.readline())
-    # except IOError:
-    #     print("error : {}".format(IOError))
-    
-    
-    # if mdata == send.readline().decode().strip():
-    #     mdata = mdata.split('#')
-    #     sensor = int (mdata[1])
-    #     print ("ID : {}, Intensitas : {}".format (mdata[0], sensor))
+    if send.inWaiting():
+        mdata = send.read().decode()
+        print(mdata)
+        print(send.readline())
+        # except IOError:
+        #     print("error : {}".format(IOError))
+        
+        
+        # if mdata == send.readline().decode().strip():
+        #     mdata = mdata.split('#')
+        #     sensor = int (mdata[1])
+        #     print ("ID : {}, Intensitas : {}".format (mdata[0], sensor))
 
     sleep(1)
