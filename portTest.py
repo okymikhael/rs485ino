@@ -30,4 +30,4 @@ while True:
         #     print ("ID : {}, Intensitas : {}".format (mdata[0], sensor))
     print(send.readline())
 
-    sleep(0.5)
+    sleep(1)
