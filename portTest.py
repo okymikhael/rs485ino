@@ -12,19 +12,20 @@ send = serial.Serial(
     parity=serial.PARITY_NONE,
     stopbits=serial.STOPBITS_ONE,
     bytesize=serial.EIGHTBITS,
-    timeout=0.5
+    timeout=1
 )
 
 while True:
     # try:
-    if send.in_waiting:
-        mdata = send.read().decode()
-        print(mdata)
-        print(send.readline())
+    # if send.in_waiting:
+    #     mdata = send.read().decode()
+    #     print(mdata)
+    #     print(send.readline())
         
-        if mdata == send.readline().decode().strip():
-            mdata = mdata.split('#')
-            sensor = int (mdata[1])
-            print ("ID : {}, Intensitas : {}".format (mdata[0], sensor))
+    #     if mdata == send.readline().decode().strip():
+    #         mdata = mdata.split('#')
+    #         sensor = int (mdata[1])
+    #         print ("ID : {}, Intensitas : {}".format (mdata[0], sensor))
 
+    print(send.readline())
     sleep(1)
