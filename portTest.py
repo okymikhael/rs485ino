@@ -16,12 +16,12 @@ send = serial.Serial(
 )
 
 while True:
-    try:
-        mdata = send.read().decode()
-        print(mdata)
-        print(send.readline())
-    except IOError:
-        print("error : {}".format(IOError))
+    # try:
+    mdata = send.read().decode()
+    print(mdata)
+    print(send.readline())
+    # except IOError:
+    #     print("error : {}".format(IOError))
     
     
     # if mdata == send.readline().decode().strip():
