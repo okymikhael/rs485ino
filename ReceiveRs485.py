@@ -10,7 +10,7 @@ GPIO.setup(7, GPIO.OUT, initial= GPIO.LOW)
 
 Ser1 = serial.Serial('/dev/ttyUSB0',9600)
                    
-Ser1.flushInput()
+# Ser1.flushInput()
 
 while True:
     print("Waiting")
