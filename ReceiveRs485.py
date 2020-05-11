@@ -16,6 +16,8 @@ send = serial.Serial(
 )
 
 send.reset_input_buffer()
+send.reset_output_buffer()
+
 # flushinput()
 while True:
     # try:
