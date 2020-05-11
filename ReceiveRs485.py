@@ -25,6 +25,7 @@ send.flush()
 while True:
     line = send.readline().decode('utf-8').rstrip()
     print(line)
+    print(line is None)
     sleep(1)
 
 
