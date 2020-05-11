@@ -21,7 +21,7 @@ while True:
         print(mdata)
         print(send.readline())
     except IOError:
-        print(IOError)
+        print("error : {}".format(IOError))
     
     
     # if mdata == send.readline().decode().strip():
