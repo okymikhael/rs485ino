@@ -4,7 +4,7 @@ import RPi.GPIO as GPIO
 from time import sleep
 
 GPIO.setmode(GPIO.BOARD)
-GPIO.setup(7, GPIO.OUT, initial=GPIO.HIGH)
+GPIO.setup(7, GPIO.OUT, initial=GPIO.LOW)
 
 send = serial.Serial(
     port='/dev/serial0',
