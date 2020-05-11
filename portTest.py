@@ -21,4 +21,10 @@ while True:
     mdata = send.read().decode()
     print(mdata)
     print(send.read())
+    
+    if mdata == send.readline().decode().strip():
+            mdata = mdata.split('#')
+            sensor = int (mdata[1])
+            print ("ID : {}, Intensitas : {}".format (mdata[0], sensor))
+
     time.sleep(1.5)
