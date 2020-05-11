@@ -25,7 +25,7 @@ send.flush()
 while True:
     line = send.readline().decode('utf-8').rstrip()
     print(line)
-    print(line.len() if line.len() > 0 else 0)
+    print(len(line) if len(line) > 0 else 0)
     sleep(1)
 
 
