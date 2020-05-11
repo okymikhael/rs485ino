@@ -12,7 +12,7 @@ send = serial.Serial(
     parity=serial.PARITY_NONE,
     stopbits=serial.STOPBITS_ONE,
     bytesize=serial.EIGHTBITS,
-    timeout=0.050
+    timeout=0.5
 )
 
 while True:
@@ -30,4 +30,4 @@ while True:
         #     print ("ID : {}, Intensitas : {}".format (mdata[0], sensor))
     print(send.readline())
 
-    sleep(1)
+    sleep(0.5)
