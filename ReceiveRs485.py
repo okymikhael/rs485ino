@@ -27,9 +27,9 @@ while True:
         # print(mdata)
         print(send.readline())
         
-        if mdata == send.readline().decode().strip():
-            mdata = mdata.split('#')
-            sensor = int (mdata[1])
-            print ("ID : {}, Intensitas : {}".format (mdata[0], sensor))
+        # if mdata == send.readline().decode().strip():
+        #     mdata = mdata.split('#')
+        #     sensor = int (mdata[1])
+        #     print ("ID : {}, Intensitas : {}".format (mdata[0], sensor))
 
     sleep(1)
