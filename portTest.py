@@ -7,7 +7,7 @@ GPIO.setmode(GPIO.BOARD)
 GPIO.setup(7, GPIO.OUT, initial=GPIO.LOW)
 
 send = serial.Serial(
-    port='/dev/serial0',
+    port='/dev/ttyUSB1',
     baudrate = 9600,
     parity=serial.PARITY_NONE,
     stopbits=serial.STOPBITS_ONE,
