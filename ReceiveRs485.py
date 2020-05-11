@@ -17,6 +17,8 @@ send = serial.Serial(
 # send = serial.Serial('/dev/ttyUSB0', 4800, 8, 'N', 1, timeout=1)
 
 send.reset_input_buffer()
+send.flush()
+
 # send.reset_output_buffer()
 # flushinput()
 while True:
@@ -26,6 +28,7 @@ while True:
         # send.flushInput()
         # print(mdata)
         print(send.readline())
+        print(send.readline().decode('utf-8').rstrip())
         
         # if mdata == send.readline().decode().strip():
         #     mdata = mdata.split('#')
