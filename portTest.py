@@ -7,9 +7,6 @@ from time import sleep
 global newln
 newln = 0
 
-if __name__ == "__main__":
-    main(newln)
-
 def main(newln):
     GPIO.setmode(GPIO.BOARD)
     GPIO.setup(7, GPIO.OUT, initial=GPIO.LOW)
@@ -40,3 +37,6 @@ def main(newln):
             newln += 1
 
         sleep(1)
+
+if __name__ == "__main__":
+    main(newln)
