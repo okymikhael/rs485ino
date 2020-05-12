@@ -4,6 +4,8 @@ import os
 import RPi.GPIO as GPIO
 from time import sleep
 
+global newln
+newln = 0
 def main():
     GPIO.setmode(GPIO.BOARD)
     GPIO.setup(7, GPIO.OUT, initial=GPIO.LOW)
@@ -26,6 +28,12 @@ def main():
         id_arduino = line[2:4]
         data = line[5:]
         print ("ID : {}, Intensitas : {}".format (id_arduino, data))
+        
+        if newln == 1:
+            print("\n")
+            newln -= 1
+        else:
+            newln += 1
 
         sleep(1)
 

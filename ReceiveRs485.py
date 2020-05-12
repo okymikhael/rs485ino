@@ -16,6 +16,8 @@ send = serial.Serial(
     timeout=1
 )
 
+newln = 0
+
 send.flush()
 while True:
     line = send.readline().decode('utf-8').rstrip()
@@ -25,5 +27,11 @@ while True:
     id_arduino = line[2:4]
     data = line[5:]
     print ("ID : {}, Intensitas : {}".format (id_arduino, data))
+
+    if newln == 1:
+        print("\n")
+        newln -= 1
+    else:
+        newln += 1
 
     sleep(1)
