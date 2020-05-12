@@ -1,5 +1,5 @@
 import time
-import serialy
+import serial
 import os
 import RPi.GPIO as GPIO
 from time import sleep
