@@ -1,7 +1,6 @@
-# format text
-# $01#1111
+newln = 0
 
-text = "$01#1111"
+def mei():
+    print(newln)
 
-print(text[1:3])
-print(text[4:])
+mei()

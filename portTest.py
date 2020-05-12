@@ -6,7 +6,11 @@ from time import sleep
 
 global newln
 newln = 0
-def main():
+
+if __name__ == "__main__":
+    main(newln)
+
+def main(newln):
     GPIO.setmode(GPIO.BOARD)
     GPIO.setup(7, GPIO.OUT, initial=GPIO.LOW)
 
@@ -23,19 +27,16 @@ def main():
     while True:
         line = send.readline().decode('utf-8').rstrip()
         if len(line) == 0:
-            main()
+            main(newln)
 
         id_arduino = line[2:4]
         data = line[5:]
         print ("ID : {}, Intensitas : {}".format (id_arduino, data))
         
         if newln == 1:
-            print("\n")
+            print("")
             newln -= 1
         else:
             newln += 1
 
         sleep(1)
-
-if __name__ == "__main__":
-    main()

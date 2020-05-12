@@ -29,7 +29,7 @@ while True:
     print ("ID : {}, Intensitas : {}".format (id_arduino, data))
 
     if newln == 1:
-        print("\n")
+        print("")
         newln -= 1
     else:
         newln += 1
