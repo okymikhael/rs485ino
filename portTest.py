@@ -33,10 +33,10 @@ def main(newln):
         if newln == 1:
             print("")
             newln -= 1
+            sleep(1)
         else:
             newln += 1
 
-        sleep(1)
 
 if __name__ == "__main__":
     main(newln)

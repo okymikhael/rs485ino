@@ -31,7 +31,6 @@ while True:
     if newln == 1:
         print("")
         newln -= 1
+        sleep(1)
     else:
         newln += 1
-
-    sleep(1)
