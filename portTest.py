@@ -20,6 +20,8 @@ def main():
     send.flush()
     while True:
         line = send.readline().decode('utf-8').rstrip()
+        print(line)
+        print(len(line))
         id_arduino = line[1:3]
         data = line[4:]
         print ("ID : {}, Intensitas : {}".format (id_arduino, data))
