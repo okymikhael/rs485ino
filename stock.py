@@ -24,7 +24,8 @@ send = serial.Serial(
 send.flush()
 # send.reset_input_buffer()
 while True:
-    line = send.readline().decode('utf-8').rstrip()
+    # line = send.readline().decode('utf-8').rstrip()
+    line = send.readline()
     print(line)
 
     # if len(line) == 0:
