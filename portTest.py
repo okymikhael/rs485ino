@@ -22,20 +22,24 @@ def main(newln):
 
     send.flush()
     while True:
-        line = send.readline().decode('utf-8').rstrip()
-        if len(line) == 0:
-            main(newln)
+        try:
+            line = send.readline().decode('utf-8').rstrip()
+            if len(line) == 0:
+                main(newln)
 
-        id_arduino = line[2:4]
-        data = line[5:]
-        print ("ID : {}, Intensitas : {}".format (id_arduino, data))
+            id_arduino = line[2:4]
+            data = line[5:]
+            print ("ID : {}, Intensitas : {}".format (id_arduino, data))
+            
+            if newln == 1:
+                print("")
+                newln -= 1
+                sleep(1)
+            else:
+                newln += 1
+        except IOError:
+            pass
         
-        if newln == 1:
-            print("")
-            newln -= 1
-            sleep(1)
-        else:
-            newln += 1
 
 
 if __name__ == "__main__":
